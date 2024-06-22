@@ -1,5 +1,5 @@
 import { AiFillAppstore } from "react-icons/ai";
-import { FaFlask, FaGlobe} from "react-icons/fa";
+import { FaFlask } from "react-icons/fa";
 import { SiMicrosoftexcel, SiAdobeillustrator, SiFirebase } from "react-icons/si";
 
 // Features Data
