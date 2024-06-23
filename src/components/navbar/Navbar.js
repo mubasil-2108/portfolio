@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { logo } from "../../assets/index"
 import { navLinksdata } from '../../constants';
 import pdf from '../../assets/pdf/resume.pdf'
@@ -34,10 +34,10 @@ const Navbar = () => {
             </li>
           ))}
           <li className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300">
-                  <a href={pdf} download="resume.pdf">
-                    Download Resume
-                  </a>
-                </li>
+            <a href={pdf} download="resume.pdf">
+              Download Resume
+            </a>
+          </li>
         </ul>
         <span
           onClick={() => setShowMenu(!showMenu)}
@@ -51,7 +51,7 @@ const Navbar = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                Experienced developer skilled in creating innovative software solutions, proficient in multiple programming languages, and dedicated to delivering high-quality, efficient code. Strong problem-solver with a passion for continuous learning and improvement.
+                  Experienced developer skilled in creating innovative software solutions, proficient in multiple programming languages, and dedicated to delivering high-quality, efficient code. Strong problem-solver with a passion for continuous learning and improvement.
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
@@ -73,7 +73,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                 ))}
-                
+
               </ul>
               <div className="flex flex-col gap-4">
                 <h2 className="text-base uppercase font-titleFont mb-4">
@@ -81,13 +81,19 @@ const Navbar = () => {
                 </h2>
                 <div className="flex gap-4">
                   <span className="bannerIcon">
-                    <FaFacebookF />
+                    <a href='https://www.facebook.com/mubasil.behzad.1?mibextid=ZbWKwL'>
+                      <FaFacebookF />
+                    </a>
                   </span>
                   <span className="bannerIcon">
-                    <FaTwitter />
+                    <a href='https://github.com/mubasil-2108'>
+                      <FaGithub />
+                    </a>
                   </span>
                   <span className="bannerIcon">
-                    <FaLinkedinIn />
+                    <a href='https://www.linkedin.com/in/mubasil-behzad-33b041301'>
+                      <FaLinkedinIn />
+                    </a>
                   </span>
                 </div>
               </div>

@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex gap-4">
           <span className="bannerIcon">
             <a href='https://www.facebook.com/mubasil.behzad.1?mibextid=ZbWKwL'>
-              <FaFacebookF href='' />
+              <FaFacebookF />
             </a>
           </span>
           <span className="bannerIcon">
