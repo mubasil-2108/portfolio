@@ -73,7 +73,11 @@ const Navbar = () => {
                     </Link>
                   </li>
                 ))}
-
+                <li className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300">
+                  <a href={pdf} download="resume.pdf">
+                    Download Resume
+                  </a>
+                </li>
               </ul>
               <div className="flex flex-col gap-4">
                 <h2 className="text-base uppercase font-titleFont mb-4">
