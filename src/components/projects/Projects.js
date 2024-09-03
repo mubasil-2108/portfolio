@@ -25,8 +25,7 @@ const Projects = () => {
         />
         <ProjectsCard
           title="E-commerce Website"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+          des="It is one of my semester project. A general store where can buy product. It also has admin side where admin can update theeir products. This project is made in C#."
           src={projectTwo}
           lnk={'https://github.com/mubasil-2108/Website'}
         />
@@ -46,7 +45,7 @@ const Projects = () => {
         />
         <ProjectsCard
           title="Health Care"
-          des=" Standing in a queue and for for doctor appointment leads to waste of time of patients. So, here is an app that show the available doctors of specfic city."
+          des=" Standing in a queue and for doctor appointment leads to waste of time of patients. So, here is an app that show the available doctors of specfic city."
           src={projectFive}
           lnk={'https://github.com/mubasil-2108/HealthCare'}
         />

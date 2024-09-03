@@ -13,7 +13,7 @@ const ContactLeft = () => {
       <div className="flex flex-col gap-4">
         <h3 className="text-3xl font-bold text-white">Mubasil Behzad</h3>
         <p className="text-lg font-normal text-gray-400">
-          Full Stack Developer
+          React Native Developer
         </p>
         <p className="text-base text-gray-400 tracking-wide">
           Experienced developer skilled in creating innovative software solutions, proficient in multiple programming languages, and dedicated to delivering high-quality, efficient code. Strong problem-solver with a passion for continuous learning and improvement.

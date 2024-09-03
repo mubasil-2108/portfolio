@@ -17,7 +17,7 @@ const Education = () => {
         </div>
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="BSc in Computer Science"
+            title="BS in Computer Science"
             subTitle="University of Sialkot (2020 - 2024)"
             result="3.51/4"
             des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
