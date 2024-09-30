@@ -16,8 +16,8 @@ const Experience = () => {
         </div>
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="App Developer"
-            subTitle="Balawal IT House - (2021 - Present)"
+            title="React Native Developer"
+            subTitle="Balawal IT House - (05/2024 - 09/2024)"
             result="Pakistan"
             des="Passionate and experienced React Native Developer with a strong foundation in building robust mobile applications for android."
           />
@@ -29,7 +29,7 @@ const Experience = () => {
           />
           <ResumeCard
             title="Front-end Developer using UI"
-            subTitle="Balawal IT House - (2021 - present)"
+            subTitle="Balawal IT House - (05/2024 - 09/2024)"
             result="Pakistan"
             des="Skilled in app interface development using React Native, integrating UI design principles for seamless and visually appealing user experiences."
           />

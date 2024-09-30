@@ -19,7 +19,7 @@ const Education = () => {
           <ResumeCard
             title="BS in Computer Science"
             subTitle="University of Sialkot (2020 - 2024)"
-            result="3.51/4"
+            result="3.46/4"
             des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
           />
           <ResumeCard
