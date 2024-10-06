@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { projectOne, projectTwo, projectThree, projectFour, projectFive } from "../../assets/index";
+import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -48,6 +48,12 @@ const Projects = () => {
           des=" Standing in a queue and for doctor appointment leads to waste of time of patients. So, here is an app that show the available doctors of specfic city."
           src={projectFive}
           lnk={'https://github.com/mubasil-2108/HealthCare'}
+        />
+        <ProjectsCard
+          title="Local Eyes"
+          des=" A multi-vendor tour guide app where tourists can hire local guides in specific cities for personalized tours. Locals can create profiles to offer their services, connecting directly with travelers seeking authentic, guided experiences."
+          src={projectSix}
+          lnk={'https://github.com/mubasil-2108/Local_Eyes'}
         />
         
       </div>
