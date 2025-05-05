@@ -19,14 +19,14 @@ const ProjectsCard = ({ key, title, des, src,lnk, webLink }) => {
             </h3>
             <div className="flex gap-2">
               <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                <a href={lnk} target='_blank'>
+                <a href={lnk} target='_blank' rel="noopener noreferrer">
                 <BsGithub />
                 </a>
               </span>
               {
                 webLink && (
                   <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                    <a href={webLink} target='_blank'>
+                    <a href={webLink} target='_blank' rel="noopener noreferrer">
                     <BsGlobe />
                     </a>
                   </span>
