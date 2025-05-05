@@ -2,8 +2,6 @@ import React from 'react'
 import Title from '../layouts/Title'
 import ProjectsCard from './ProjectsCard';
 import { projectsData } from '../../data/data';
-import { GrProjects } from 'react-icons/gr';
-import { HiArrowRight } from 'react-icons/hi';
 
 const Projects = () => {
   return (
