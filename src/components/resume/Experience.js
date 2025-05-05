@@ -11,10 +11,16 @@ const Experience = () => {
     >
       <div>
         <div className="flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2023 - present</p>
+          <p className="text-sm text-designColor tracking-[4px]">2024 - present</p>
           <h2 className="text-4xl font-bold">Work Experience</h2>
         </div>
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <ResumeCard
+            title="React Native, React JS, MERN Stack Developer"
+            subTitle="Zaman IT - (10/2024 - present)"
+            result="Pakistan"
+            des="Demonstrated strong technical expertise and professionalism in both front-end and full-stack development"
+          />
           <ResumeCard
             title="React Native Developer"
             subTitle="Balawal IT House - (05/2024 - 09/2024)"
@@ -23,7 +29,7 @@ const Experience = () => {
           />
           <ResumeCard
             title="Wordpress"
-            subTitle="royalfeelpk.com - (2020 - present)"
+            subTitle="royalfeelpk.com - (2024 - present)"
             result="Pakistan"
             des="Its a beauty and healthcare website, where every product is crafted to amplify your natural beauty. Discover a symphony of colors and textures designed to elevate your allure and empower your confidence."
           />

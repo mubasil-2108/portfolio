@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { logo } from "../../assets/index"
 import { navLinksdata } from '../../constants';
-import pdf from '../../assets/pdf/resume.pdf'
+import pdf from '../../assets/pdf/Mubasil-Resume.pdf'
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -34,7 +34,7 @@ const Navbar = () => {
             </li>
           ))}
           <li className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300">
-            <a href={pdf} download="resume.pdf">
+            <a href={pdf} download="Mubasil-Resume.pdf">
               Download Resume
             </a>
           </li>

@@ -1,7 +1,9 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
+import { projectsData } from '../../data/data';
+import { GrProjects } from 'react-icons/gr';
+import { HiArrowRight } from 'react-icons/hi';
 
 const Projects = () => {
   return (
@@ -16,46 +18,39 @@ const Projects = () => {
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-        <ProjectsCard
-          title="Quran AI"
-          des="Quran AI is an app of giving accurate knowledge to the Muslim as well as non-Muslims. 
-                After searching a query it extract the relevent data from database/.json file."
-          src={projectOne}
-          lnk={'https://github.com/mubasil-2108/QuranAI'}
-        />
-        <ProjectsCard
-          title="E-commerce Website"
-          des="It is one of my semester project. A general store where can buy product. It also has admin side where admin can update theeir products. This project is made in C#."
-          src={projectTwo}
-          lnk={'https://github.com/mubasil-2108/Website'}
-        />
-        <ProjectsCard
-          title="OYL-Client"
-          des=" It is basically Garage application, where we decides and lock our
-                appointment with our dealer. It has real time calendar, multiple payment methods and much
-                more..!"
-          src={projectThree}
-          lnk={'https://github.com/mubasil-2108/OylClient'}
-        />
-        <ProjectsCard
-          title="Life Diary"
-          des=" Memories are most precious thing that every people try remember them. So, here is an app that save your memories by writing them as journal."
-          src={projectFour}
-          lnk={'https://github.com/mubasil-2108/LifeDiary'}
-        />
-        <ProjectsCard
-          title="Health Care"
-          des=" Standing in a queue and for doctor appointment leads to waste of time of patients. So, here is an app that show the available doctors of specfic city."
-          src={projectFive}
-          lnk={'https://github.com/mubasil-2108/HealthCare'}
-        />
-        <ProjectsCard
-          title="Local Eyes"
-          des=" A multi-vendor tour guide app where tourists can hire local guides in specific cities for personalized tours. Locals can create profiles to offer their services, connecting directly with travelers seeking authentic, guided experiences."
-          src={projectSix}
-          lnk={'https://github.com/mubasil-2108/Local_Eyes'}
-        />
+      {projectsData.map((item) => (
+          <ProjectsCard
+            key={item.id}
+            title={item.title}
+            des={item.des}
+            src={item.image}
+            lnk={item.link}
+            webLink={item.webLink} 
+          />
+        ))}
         
+        {/* Show dummy div if projectsData length exceeds 5 */}
+        {/* {projectsData.length > 5 && (
+          <div className="w-full justify-center cursor-pointer p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
+            <div className='w-full h-auto items-center flex flex-col justify-center p-4 group-hover:scale-110 duration-300'>
+            <span className="text-5xl text-designColor">
+            <GrProjects />
+            </span>
+            <div className="w-full items-center mt-5 flex flex-col gap-6">
+              <div>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-base uppercase text-designColor font-normal">
+                    More Projects
+                  </h3>
+                  <span className="text-2xl ml-2 text-designColor">
+            <HiArrowRight />
+            </span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        )} */}
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaFacebookF, FaLinkedinIn, FaReact, FaGithub } from "react-icons/fa";
-import { SiFlask, SiFigma, SiFirebase, } from "react-icons/si";
+import { SiFlask, SiFigma, SiFirebase, SiMongodb, } from "react-icons/si";
 const Media = () => {
   return (
     <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
@@ -42,6 +42,9 @@ const Media = () => {
           </span>
           <span className="bannerIcon">
             <SiFigma />
+          </span>
+          <span className="bannerIcon">
+            <SiMongodb />
           </span>
         </div>
       </div>
