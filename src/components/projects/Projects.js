@@ -1,22 +1,9 @@
-import React, { useCallback, useState } from 'react'
+import React from 'react'
 import Title from '../layouts/Title'
 import ProjectsCard from './ProjectsCard';
 import { projectsData } from '../../data/data';
 
 const Projects = () => {
-  const [visibleProjects, setVisibleProjects] = useState(6);
-  
-  const loadMore = useCallback(() => {
-    setVisibleProjects(prev => prev + 3);
-  }, []);
-
-  // Simple implementation - you might want to use IntersectionObserver for better UX
-  const handleScroll = useCallback((e) => {
-    const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
-    if (scrollHeight - scrollTop <= clientHeight * 1.2) {
-      loadMore();
-    }
-  }, [loadMore]);
   return (
     <section
       id="projects"
@@ -40,28 +27,6 @@ const Projects = () => {
             webLink={item.webLink} 
           />
         ))}
-        {/* Show dummy div if projectsData length exceeds 5 */}
-        {/* {projectsData.length > 5 && (
-          <div className="w-full justify-center cursor-pointer p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
-            <div className='w-full h-auto items-center flex flex-col justify-center p-4 group-hover:scale-110 duration-300'>
-            <span className="text-5xl text-designColor">
-            <GrProjects />
-            </span>
-            <div className="w-full items-center mt-5 flex flex-col gap-6">
-              <div>
-                <div className="flex items-center justify-between">
-                  <h3 className="text-base uppercase text-designColor font-normal">
-                    More Projects
-                  </h3>
-                  <span className="text-2xl ml-2 text-designColor">
-            <HiArrowRight />
-            </span>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-        )} */}
       </div>
     </section>
   );
