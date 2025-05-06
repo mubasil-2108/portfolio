@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import Title from '../layouts/Title'
 import ProjectsCard from './ProjectsCard';
 import { projectsData } from '../../data/data';
 
 const Projects = () => {
+  const [visibleProjects, setVisibleProjects] = useState(6);
+  
+  const loadMore = useCallback(() => {
+    setVisibleProjects(prev => prev + 3);
+  }, []);
+
+  // Simple implementation - you might want to use IntersectionObserver for better UX
+  const handleScroll = useCallback((e) => {
+    const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
+    if (scrollHeight - scrollTop <= clientHeight * 1.2) {
+      loadMore();
+    }
+  }, [loadMore]);
   return (
     <section
       id="projects"
-      className="w-full py-20 border-b-[1px] border-b-black"
+      className="w-full min-h-screen py-20 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
         <Title
@@ -15,8 +28,9 @@ const Projects = () => {
           des="My Projects"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-      {projectsData.map((item) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14 "
+      >
+      {projectsData.slice(0, 6).map((item) => (
           <ProjectsCard
             key={item.id}
             title={item.title}
@@ -26,7 +40,6 @@ const Projects = () => {
             webLink={item.webLink} 
           />
         ))}
-        
         {/* Show dummy div if projectsData length exceeds 5 */}
         {/* {projectsData.length > 5 && (
           <div className="w-full justify-center cursor-pointer p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
